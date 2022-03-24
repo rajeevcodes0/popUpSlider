@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PopUp Slider</title>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="show-container">
+            <input type="range" min="0" max="100" value="50" class="default-slider">
+            <div class="custom-slider-container">
+                <audio src="./pop_sound.mp3"></audio>
+                <div class="popup-bubbles-container">
+                    <div class="main-popup-bubble"></div>
+                    <div class="secondary-bubble bubble-one"></div>
+                    <div class="secondary-bubble bubble-two"></div>
+                    <div class="secondary-bubble bubble-three"></div>
+                </div>
+                <div class="slider-empty-background">
+                    <div class="slider-fill-background">
+                        <div class="shine"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

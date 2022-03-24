@@ -1,0 +1,317 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --theme-color:rgb(88, 56, 228);
+    --theme-color-transparent: rgba(245, 24, 61,0.6)
+}
+
+.flex-container{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.show-container{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.show-container input{
+    --webkit-appearance:none;
+    appearance: none; 
+    background-color: grey;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.show-container input::-webkit-slider-thumb{
+    /* --webkit-appearance:none; */
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: var(--theme-color);;
+}
+
+.custom-slider-container{
+    width: 40%;
+    margin-top:100px;
+}
+
+.slider-empty-background{
+    height: 40px;
+    width: 100%;
+    border-radius: 100px;
+    background-color: rgb(219, 219, 219);
+    overflow: hidden;
+}
+
+.slider-fill-background{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    border-radius: 100px;
+    background-color: var(--theme-color);
+    transition: width 0.3s;
+    padding:10px;
+    
+    /* transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1); */
+}
+
+.popup-bubbles-container{
+    position: fixed;
+    opacity: 0;
+    transform: translateX(-50%);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* border:1px solid var(--theme-color-transparent); */
+    /* border:1px solid var(--theme-color); */
+    z-index: 2;
+}
+
+.main-popup-bubble{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
+
+.main-popup-bubble-animation-class{
+    animation-name: main-popup-bubble-animation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes  main-popup-bubble-animation{
+    0%{
+        opacity: 1;
+        border:3px solid var(--theme-color);
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        border: 0px solid var(--theme-color);
+        transform: scale(1.5);
+    }
+}
+
+.bubble-one{
+    position: absolute;
+    top: -20px;
+    left:0px;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    border: 1px solid var(--theme-color);
+}
+
+.bubble-one-animation-one-class{
+    animation-name:bubble-one-animation-one ;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bubble-one-animation-one {
+    0%{
+        opacity: 1;
+        border:1px solid var(--theme-color);
+        transform:scale(1);
+
+        top: -20px;
+        left:0px; 
+    }
+    100%{
+        opacity: 0;
+        border:0px solid var(--theme-color);
+        transform:scale(0);
+
+        top: -40px;
+        left:10px;
+    }
+}
+
+.bubble-one-animation-two-class{
+    animation-name:bubble-one-animation-two ;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bubble-one-animation-two {
+    0%{
+        opacity: 1;
+        border:1px solid var(--theme-color);
+        transform:scale(1);
+
+        top: -20px;
+        left:0px; 
+    }
+    100%{
+        opacity: 0;
+        border:0px solid var(--theme-color);
+        transform:scale(0);
+
+        top: -35px;
+        left:40px;
+    }
+}
+
+.bubble-two{
+    position: absolute;
+    top: -20px;
+    right:0px;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    border: 1px solid var(--theme-color);
+}
+
+.bubble-two-animation-one-class{
+    animation-name:bubble-two-animation-one ;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bubble-two-animation-one {
+    0%{
+        opacity: 1;
+        border:1px solid var(--theme-color);
+        transform:scale(1);
+
+        top: -20px;
+        right:0px;
+    }
+    100%{
+        opacity: 0;
+        border:0px solid var(--theme-color);
+        transform:scale(0);
+
+        top: -30px;
+        right:-10px;
+    }
+}
+
+.bubble-two-animation-two-class{
+    animation-name:bubble-two-animation-two ;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bubble-two-animation-two {
+    0%{
+        opacity: 1;
+        border:1px solid var(--theme-color);
+        transform:scale(1);
+
+        top: -20px;
+        right:0px;
+    }
+    100%{
+        opacity: 0;
+        border:0px solid var(--theme-color);
+        transform:scale(0);
+
+        top: -40px;
+        right:10px;
+    }
+}
+
+.bubble-three{
+    position: absolute;
+    bottom: -20px;
+    right:50%;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    border: 1px solid var(--theme-color);
+    transition: top 0.3s,left 0.3s;
+}
+
+.bubble-three-animation-one-class{
+    animation-name:bubble-three-animation-one ;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bubble-three-animation-one {
+    0%{
+        opacity: 1;
+        border:1px solid var(--theme-color);
+        transform:scale(1);
+
+        bottom: -20px;
+        right:50%;
+    }
+    100%{
+        opacity: 0;
+        border:0px solid var(--theme-color);
+        transform:scale(0);
+
+        bottom: -30px;
+        right:10%;
+    }
+}
+
+.bubble-three-animation-two-class{
+    animation-name:bubble-three-animation-two ;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bubble-three-animation-two {
+    0%{
+        opacity: 1;
+        border:1px solid var(--theme-color);
+        transform:scale(1);
+
+        bottom: -20px;
+        right:50%;
+    }
+    100%{
+        opacity: 0;
+        border:0px solid var(--theme-color);
+        transform:scale(0);
+
+        bottom: -40px;
+        right:30%;
+    }
+}
+
+.secondary-bubble-animation-class{
+    animation-name: secondary-bubble-animation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes secondary-bubble-animation {
+    0%{
+        opacity: 1;
+        border:1px solid var(--theme-color);
+        transform:scale(1);
+    }
+    100%{
+        opacity: 0;
+        border:0px solid var(--theme-color);
+        transform:scale(0);
+    }
+}
+
+.shine{
+    position: absolute;
+    top:20%;
+    left:50%;
+    border-radius: 10px;
+    height: 5px;
+    width: 80%;
+    background-color: white;
+    transform: translate(-50%,-50%);
+}
